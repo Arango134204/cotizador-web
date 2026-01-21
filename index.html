@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cotizador Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <section class="about-me">
+  <div class="about-header">
+    <h3 data-es="¿Con quién estás trabajando?"
+        data-en="Who will you be working with?"></h3>
+
+    <div class="lang-switch">
+      <button class="active" data-lang="es">ESP</button>
+      <button data-lang="en">ENG</button>
+    </div>
+  </div>
+
+  <p class="about-intro"
+     data-es="Soy Juan José Arango, desarrollador web especializado en crear soluciones digitales modernas, rápidas y orientadas a resultados."
+     data-en="I am Juan José Arango, a web developer specialized in building modern, fast, and results-driven digital solutions.">
+  </p>
+
+  <button class="about-toggle"
+          data-es="Ampliar información"
+          data-en="Expand information">
+  </button>
+
+  <div class="about-details">
+
+    <p
+      data-es="Trabajo con HTML, CSS, JavaScript, Firebase y WordPress, ayudando a emprendedores, empresas y negocios locales a fortalecer su presencia digital con sitios profesionales, escalables y optimizados."
+      data-en="I work with HTML, CSS, JavaScript, Firebase, and WordPress, helping entrepreneurs, companies, and local businesses strengthen their digital presence with professional, scalable, and optimized websites.">
+    </p>
+
+    <ul>
+      <li data-es="Desarrollo web moderno y responsive"
+          data-en="Modern and responsive web development"></li>
+      <li data-es="Integraciones dinámicas con Firebase"
+          data-en="Dynamic Firebase integrations"></li>
+      <li data-es="Diseño, despliegue y optimización en WordPress"
+          data-en="WordPress design, deployment, and optimization"></li>
+      <li data-es="Comunicación clara, enfoque profesional y entregas puntuales"
+          data-en="Clear communication, professional focus, and on-time delivery"></li>
+    </ul>
+
+    <div class="about-footer">
+      <div class="about-data">
+        <p><strong>Juan José Arango</strong></p>
+        <p>Web Developer · JavaScript · Firebase · WordPress</p>
+        <p>Pereira, Risaralda · Colombia</p>
+        <p>📞 +57 300 603 0655</p>
+        <p>✉️ juanjoara1342@icloud.com</p>
+        <p data-es="Idiomas: Español e Inglés (bilingüe) · Francés básico"
+           data-en="Languages: Spanish and English (bilingual) · Basic French">
+        </p>
+      </div>
+      <div class="about-links">
+        <a href="https://www.linkedin.com/in/juan-josé-arango-54924a36a" target="_blank">LinkedIn</a>
+        <a href="https://arango134204.github.io/portfolio/" target="_blank">Portfolio</a> </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="container">
+
+  <h1>Cotiza tu sitio web</h1>
+  <p class="subtitle">Obtén un precio estimado en minutos</p>
+
+  <!-- Barra progreso -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Subtotal -->
+  <div class="subtotal">
+    Total estimado: <span id="subtotal">$0 COP</span>
+  </div>
+
+  <!-- PASO 1 -->
+  <div class="step active">
+    <h2>Tipo de sitio</h2>
+   <div class="cards">
+  <div class="option" data-title="Landing Page" data-price="450000">
+    <h3>Landing Page</h3>
+    <p>1 página enfocada en ventas o campañas</p>
+    <span class="price">$450.000 COP</span>
+  </div>
+
+  <div class="option" data-title="Corporativo" data-price="800000">
+    <h3>Sitio Corporativo</h3>
+    <p>Hasta 5 secciones informativas</p>
+    <span class="price">$800.000 COP</span>
+  </div>
+
+  <div class="option" data-title="Tienda Online" data-price="1500000">
+    <h3>Tienda Online</h3>
+    <p>Carrito, productos y pagos</p>
+    <span class="price">$1.500.000 COP</span>
+  </div>
+</div>
+  </div>
+
+  <!-- PASO 2 -->
+  <div class="step">
+    <h2>Páginas / secciones</h2>
+    <p>Cada página adicional suma <strong>$120.000</strong></p>
+    <div class="counter">
+      <button id="minus">−</button>
+      <span id="pages">1</span>
+      <button id="plus">+</button>
+    </div>
+  </div>
+
+  <!-- PASO 3 -->
+  <div class="step">
+    <h2>Funcionalidades</h2>
+    <div class="cards">
+  <div class="option multi" data-title="Formulario de contacto" data-price="80000">
+    <h4>Formulario</h4>
+    <p>Contacto directo desde la web</p>
+    <span class="price">+$80.000</span>
+  </div>
+
+  <div class="option multi" data-title="Botón WhatsApp" data-price="50000">
+    <h4>WhatsApp</h4>
+    <p>Chat directo con clientes</p>
+    <span class="price">+$50.000</span>
+  </div>
+
+  <div class="option multi" data-title="SEO Básico" data-price="150000">
+    <h4>SEO Básico</h4>
+    <p>Optimización para Google</p>
+    <span class="price">+$150.000</span>
+  </div>
+</div>
+  </div>
+
+  <!-- PASO 4 -->
+  <div class="step">
+    <h2>Diseño</h2>
+    <div class="cards">
+  <div class="option" data-title="Plantilla base" data-price="0">
+    <h4>Plantilla Base</h4>
+    <p>Diseño profesional predefinido</p>
+    <span class="price">$0</span>
+  </div>
+
+  <div class="option" data-title="Diseño personalizado" data-price="300000">
+    <h4>Diseño Personalizado</h4>
+    <p>Diseño único y exclusivo</p>
+    <span class="price">+$300.000</span>
+  </div>
+</div>
+  </div>
+
+  <!-- PASO 5 -->
+  <div class="step">
+    <h2>⏱ Tiempo de entrega</h2>
+
+<div class="cards">
+
+  <label class="option entrega">
+    <input type="radio" name="entrega" value="urgente">
+    <h4>Urgente</h4>
+    <p>
+      Entrega en <strong>1 semana</strong><br>
+      Prioridad máxima en el desarrollo
+    </p>
+    <span class="price">+20%</span>
+  </label>
+
+  <label class="option entrega active">
+    <input type="radio" name="entrega" value="base" checked>
+    <h4>Base</h4>
+    <p>
+      Entrega en <strong>2 semanas</strong><br>
+      Precio estándar y balanceado
+    </p>
+    <span class="price">Precio base</span>
+  </label>
+
+  <label class="option entrega">
+    <input type="radio" name="entrega" value="extendida">
+    <h4>Extendida</h4>
+    <p>
+      Entrega en <strong>4 semanas</strong><br>
+      Mejor precio por mayor plazo
+    </p>
+    <span class="price">−10%</span>
+  </label>
+
+</div>
+  </div>
+
+  <!-- PASO 6 - RESUMEN -->
+  <div class="step">
+    <h2>Resumen de tu cotización</h2>
+
+    <div id="resumen" class="resumen"></div>
+
+    <p class="final" id="finalPrice"></p>
+
+    <a id="whatsapp" target="_blank">Enviar por WhatsApp</a>
+  </div>
+
+  <!-- Navegación -->
+  <div class="nav">
+    <button id="prev">Anterior</button>
+    <button id="next">Siguiente</button>
+  </div>
+
+</div>
+
+<script src="js/cotizador.js"></script>
+</body>
+</html>

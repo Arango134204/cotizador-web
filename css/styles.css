@@ -1,0 +1,428 @@
+/* ========================
+   VARIABLES DE MARCA
+======================== */
+:root {
+  --bg-main: #0b0e14;
+  --bg-card: #121622;
+  --bg-soft: #181d2f;
+
+  --primary: #4f7cff;
+  --primary-soft: rgba(79,124,255,0.15);
+
+  --accent: #00e0ff;
+
+  --text-main: #ffffff;
+  --text-muted: #aab0c6;
+
+  --success: #00c853;
+
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.35);
+  --transition: all 0.35s ease;
+}
+
+/* ========================
+   BASE
+======================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(1200px 600px at top, #141a3a, #0b0e14);
+  color: var(--text-main);
+}
+
+/* ========================
+   CONTENEDOR
+======================== */
+.container {
+  max-width: 920px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* ========================
+   HEADINGS
+======================== */
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 17px;
+  margin-bottom: 40px;
+}
+
+/* ========================
+   PROGRESO
+======================== */
+.progress-container {
+  background: #1a1f33;
+  height: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transition: width 0.4s ease;
+}
+
+/* ========================
+   SUBTOTAL
+======================== */
+.subtotal {
+  text-align: right;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 30px;
+}
+
+/* ========================
+   STEPS
+======================== */
+.step {
+  display: none;
+  animation: fadeIn 0.45s ease;
+}
+
+.step.active {
+  display: block;
+}
+
+/* ========================
+   CARDS
+======================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.option {
+  background: linear-gradient(180deg, var(--bg-card), var(--bg-soft));
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+
+.option h3,
+.option h4 {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.option p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.option span {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Hover */
+.option:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  background: linear-gradient(180deg, #18204a, #12162a);
+}
+
+/* Active */
+.option.active {
+  border-color: var(--accent);
+  background:
+    linear-gradient(180deg, #1c2555, #141a3a);
+  box-shadow: 0 0 0 1px var(--primary-soft),
+              0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* ========================
+   CONTADOR PÁGINAS
+======================== */
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.counter button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(180deg, #1c2455, #11163a);
+  color: var(--text-main);
+  font-size: 28px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.counter button:hover {
+  background: linear-gradient(180deg, var(--primary), var(--accent));
+  color: #000;
+}
+
+/* ========================
+   ENTREGA
+======================== */
+.option.entrega .price {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-size: 13px;
+  color: var(--accent);
+  opacity: 0.85;
+}
+
+/* ========================
+   NAVEGACIÓN
+======================== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.nav button {
+  padding: 16px 36px;
+  border-radius: 40px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#next {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #000;
+}
+
+#next:hover {
+  transform: translateY(-2px);
+}
+
+#prev {
+  background: #1a1f33;
+  color: var(--text-main);
+}
+
+/* ========================
+   RESUMEN
+======================== */
+.resumen {
+  background: linear-gradient(180deg, var(--bg-card), var(--bg-soft));
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  box-shadow: var(--shadow-soft);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: resumenIn 0.6s ease forwards;
+}
+
+.resumen span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.precio-final {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 18px;
+  color: var(--success);
+}
+
+/* ========================
+   WHATSAPP
+======================== */
+#whatsapp {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 18px 42px;
+  background: linear-gradient(90deg, #25d366, #1ebe57);
+  color: #000;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+#whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(37,211,102,0.35);
+}
+
+/* ========================
+   ANIMACIONES
+======================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes resumenIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav button {
+    width: 100%;
+  }
+}
+
+/* ========================
+   ABOUT ME (INTEGRADO)
+======================== */
+.about-me {
+  margin-top: 80px;
+  padding: 32px;
+  background: linear-gradient(180deg, var(--bg-card), var(--bg-soft));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.about-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-switch button {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #2a2f4a;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-switch button.active {
+  background: var(--primary-soft);
+  color: var(--accent);
+  border-color: var(--primary);
+}
+
+.about-intro {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.about-toggle {
+  margin-top: 14px;
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.about-details {
+  margin-top: 20px;
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.about-details p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.about-details ul {
+  margin: 16px 0;
+  padding-left: 18px;
+}
+
+.about-details li {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.about-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.about-links {
+  display: flex;
+  gap: 14px;
+}
+
+.about-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.about-links a:hover {
+  text-decoration: underline;
+}
